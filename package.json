@@ -1,0 +1,9 @@
+{
+  "name": "alpaca-tc-github-io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/alpaca-tc/alpaca-tc.github.io",
+  "author": "alpaca-tc <alpaca-tc@alpaca.tc>",
+  "license": "MIT",
+  "private": true
+}
