@@ -1,0 +1,87 @@
+<!DOCTYPE html><html lang="ja"><head><script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-44082439-2"></script><script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-44082439-2');
+            </script><title>Vim中級者を脱する スコープ編 - alpaca-tc</title><meta charSet="utf-8"/><meta name="viewport" content="initial-scale=1.0, width=device-width"/><meta name="title" content="Vim中級者を脱する スコープ編 - alpaca-tc"/><meta name="description" content=""/><link rel="shortcut icon" href="/images/common/favicon.ico" type="image/x-icon"/><meta name="google-site-verification" content="thSL3cUT7BV1-AENglRFIF-kv6I85JJ6_iUGAU8GaQI"/><meta property="og:title" content="Vim中級者を脱する スコープ編 - alpaca-tc"/><meta property="og:locale" content="ja_JP"/><meta property="og:image" content="https://alpaca.tc/images/common/profile.jpg"/><meta property="og:type" content="blog"/><meta property="og:url" content="https://alpaca.tc/posts/2013-11-13-break-vim-beginners-scope"/><meta property="og:site_name" content="alpaca-tc"/><meta property="og:description" content=""/><meta property="fb:app_id" content="224701561024840"/><meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Vim中級者を脱する スコープ編 - alpaca-tc"/><meta name="twitter:description" content=""/><meta name="twitter:image" content="https://alpaca.tc/images/meta/twitter.jpg"/><meta name="twitter:site" content="@alpaca_tc"/><meta name="twitter:creator" content="@alpaca_tc"/><meta name="next-head-count" content="23"/><link rel="preload" href="/_next/static/css/7005a54d53bcd928d432.css" as="style"/><link rel="stylesheet" href="/_next/static/css/7005a54d53bcd928d432.css" data-n-g=""/><noscript data-n-css=""></noscript><link rel="preload" href="/_next/static/chunks/webpack-0d9327d367da67cab38e.js" as="script"/><link rel="preload" href="/_next/static/chunks/framework-4921b1014669b85dd3db.js" as="script"/><link rel="preload" href="/_next/static/chunks/commons-8d0190730bd975b0bc62.js" as="script"/><link rel="preload" href="/_next/static/chunks/main-429af4e6fd9250d0e88a.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/_app-340e5e8fbf02bcf81997.js" as="script"/><link rel="preload" href="/_next/static/chunks/3-674deb72c571b248ccbe.js" as="script"/><link rel="preload" href="/_next/static/chunks/pages/posts/%5Bid%5D-c318ae8c65f3a72f51d1.js" as="script"/></head><body class="font-sans text-black leading-tight antialiased"><div id="__next"><div class="py-8 lg:py-16 px-6 md:px-16 lg:px-24 "><div class="relative z-20 flex justify-between items-center"><div class="flex lg:flex md:block items-center max-w-full"><div class="mb-0 md:mb-4 lg:mb-0 flex flex-shrink-0 pr-4 md:pr-6 lg:pr-12"><div class="inline-block h-10 w-10 md:h-12 md:w-12 lg:h-20 lg:w-20"><a class="flex items-center no-underline"><img class="rounded-full" src="/images/profile.jpg" width="100%" height="100%"/></a></div></div><div><a class="block text-black no-underline font-bold text-xl lg:text-3xl font-extrabold leading-none lg:leading-tight" href="/">alpaca-tc</a><div class="hidden md:flex mt-3 lg:mt-4 uppercase tracking-wide text-xs space-x-6"><a class="text-black font-semibold no-underline hover:text-black" href="/">Posts</a><a class="text-gray-500 font-semibold no-underline hover:text-black" href="/about_me">About Me</a><a class="text-gray-500 font-semibold no-underline hover:text-black" href="/works">Works</a><a href="https://github.com/alpaca-tc" class="text-gray-500 font-semibold no-underline hover:text-black" target="_blank" rel="noreferrer">GitHub</a><a href="https://twitter.com/alpaca-tc" class="text-gray-500 font-semibold no-underline hover:text-black" target="_blank" rel="noreferrer">Twitter</a></div></div></div><div class="block md:hidden"><button class="block"><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="text-black h-6 w-6 block"><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg><svg fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" class="text-black h-6 w-6 hidden"><path d="M10 8.586L2.929 1.515 1.515 2.929 8.586 10l-7.071 7.071 1.414 1.414L10 11.414l7.071 7.071 1.414-1.414L11.414 10l7.071-7.071-1.414-1.414L10 8.586z"></path></svg></button></div></div><div class="md:hidden z-10 bg-white fixed pt-24 pin block hidden"><div class="space-y-8 overflow-y-auto pt-6 pb-8 px-12 max-h-full overflow-y-auto"><a class="block text-black font-bold no-underline" href="/">Posts</a><a class="block text-black font-bold no-underline" href="/about_me">About Me</a><a class="block text-black font-bold no-underline" href="/works">Works</a><a href="https://github.com/alpaca-tc" class="block text-black font-bold no-underline" target="_blank" rel="noreferrer">GitHub</a><a href="https://twitter.com/alpaca-tc" class="block text-black font-bold no-underline" target="_blank" rel="noreferrer">Twitter</a></div></div><div class="lg:pl-32 mt-12"><article class="max-w-3xl md:mt-6 rounded-xl mx-auto bg-white dark:bg-cool-gray-800"><div class="text-grey-dark uppercase font-semibold text-xs tracking-wide">2013-11-13</div><h1 class="text-2xl font-extrabold text-black leading-tight mt-1 mb-6">Vim中級者を脱する スコープ編</h1><div class="prose max-w-3xl mx-auto dark:text-cool-gray-100"><p>個人的に、Vimで一番ハマったのが<strong>スコープの問題</strong>でした。</p>
+<p>vimrcのコピペばかりの、あなた。</p>
+<p>せめて、よく登場するスコープだけでも理解してみましょう。</p>
+<!-- more -->
+<h1>よく見るスコープ一覧</h1>
+<ul>
+<li><em>グローバル</em>スコープ　<code>g:</code></li>
+<li><em>関数内</em>スコープ　<code>a:</code></li>
+<li><em>スクリプト</em>スコープ　<code>s:</code></li>
+<li><em>バッファ</em>スコープ　<code>b:</code></li>
+<li><em>接頭辞なし</em>　<code>let huga=...</code>など</li>
+</ul>
+<h2>グローバル(g:)スコープ</h2>
+<p><strong>どこからでも参照できます。</strong></p>
+<p>プラグインの設定で見慣れたスコープですね。</p>
+<p><code>let g:neocomplete#enable_at_startup = 1</code></p>
+<p>変数を初期化するには、次のようにします。
+大量のエラーコードによって操作できなくなるので、<strong>嫌いな人のvimrcの末尾に書き込んでください。</strong></p>
+<div class="remark-highlight"><pre class="language-unknown"><code class="language-unknown">for key in keys(g:)
+  execute &#x26;#39;unlet g:&#x26;#39; . key
+endfor</code></pre></div>
+<h2>関数内(a:)スコープ</h2>
+<p><strong>関数内で、引数を参照するときに使用するスコープ</strong></p>
+<p>個人的に一番理解しがたいスコープです。</p>
+<p>こんな感じで使います。他言語から移ってきた人には、正直使いづらい。</p>
+<div class="remark-highlight"><pre class="language-unknown"><code class="language-unknown">function! Huga(first, second)
+  echo a:first
+  &#x26;quot;=&#x26;gt; &#x26;#39;a&#x26;#39;
+
+  echo a:
+  &#x26;quot;=&#x26;gt; {&#x26;#39;0&#x26;#39;: 0, &#x26;#39;000&#x26;#39;: [], &#x26;#39;second&#x26;#39;: &#x26;#39;b&#x26;#39;, &#x26;#39;first&#x26;#39;: &#x26;#39;a&#x26;#39;, &#x26;#39;firstline&#x26;#39;: 5, &#x26;#39;lastline&#x26;#39;: 5}
+endfunction
+
+call Huga(&#x26;#39;a&#x26;#39;, &#x26;#39;b&#x26;#39;)</code></pre></div>
+<p>「あーなるほど、<strong>関数内でだけ有効なスコープなのか。</strong>」</p>
+<p>と、思っていたら<em>それは間違い。</em></p>
+<p>下記のようにすると、<strong>グローバルスコープとして参照できます。</strong></p>
+<div class="remark-highlight"><pre class="language-unknown"><code class="language-unknown">function! a:huga()
+  echo &#x26;#39;Global!?!?!?&#x26;#39;
+endfunction
+
+call a:huga() &#x26;quot; =&#x26;gt; Global!?!?!?</code></pre></div>
+<p>実は、これ関数名に<code>:</code>が許可されているだけです。
+なので実際は<code>a:</code>スコープは関係ないんだけど、分かりづらい。</p>
+<h2>スクリプト(s:)スコープ</h2>
+<p><strong>ファイル内でのみ有効なスコープ</strong>です。</p>
+<p>プラグインで、プライベートなメソッドや定数を作るときによく使います。</p>
+<div class="remark-highlight"><pre class="language-unknown"><code class="language-unknown">let s:script_scope = &#x26;#39;外部からは参照できない&#x26;#39;
+function! s:script_scope_method()
+  &#x26;quot; プライベートメソッドとしてよく使われる
+endfunction</code></pre></div>
+<p>この<code>s:</code>は、スクリプトがsourceされるときに置き換えられ、<code>&#x3C;SNR>1_...</code>という感じの形になります。</p>
+<p>えぇ、そうです。すると、<strong>グローバルなスコープとして参照できます。</strong></p>
+<p>この<code>&#x3C;SNR></code>の後にどの数値が割り振られているかは、<code>:scriptnames</code>で参照できます。</p>
+<p>また、<code>s:</code>は<code>&#x3C;SID></code>として使えばスコープを超えて使用できるようになります。</p>
+<p>マッピングの時に、scriptスコープを使う時などは必須ですね。</p>
+<div class="remark-highlight"><pre class="language-unknown"><code class="language-unknown">nnoremap s :echo &#x26;lt;SID&#x26;gt;SID()&#x26;lt;CR&#x26;gt;</code></pre></div>
+<p>ただし、<strong>変数は基本的には聖域</strong>です。</p>
+<h2>バッファ(b:)スコープ</h2>
+<p><strong>バッファ単位のスコープ</strong>です。</p>
+<p>ファイルタイプによる設定や、一時バッファによる変数などに使います。</p>
+<ul>
+<li>ファイルタイプの変更で、<code>b:current_syntax</code>などが初期化&#x26;格納されます</li>
+<li>Uniteを起動で、<code>b:unite</code>にデータが格納されます。</li>
+</ul>
+<p>Uniteのデバッグするときには、<code>echo b:unite.candidates</code>などを参照しましょう。</p>
+<p>あぁ、ようやくまともなスコープだ。</p>
+<h2>接頭辞なし(<code>let huga=</code>)変数</h2>
+<p>えぇ。<strong>グローバルなスコープです。</strong></p>
+<p>お前もか！</p>
+<p>マナーとしては、やはり<code>g:</code>で宣言したいところですが、</p>
+<p>Vimにデフォルトで入っているプラグインは、容赦なくこの変数を使ってきます。</p>
+<p><code>:echo loaded_*&#x3C;Tab></code>などすれば、奴らを見つけられるはずです。</p>
+<p>細かいことを言えば、関数内ならばローカルスコープです。。。</p>
+<h2>スコープのまとめ</h2>
+<ul>
+<li>スコープは<strong>ほとんどグローバルで参照できる</strong></li>
+<li>VimLは枠にハマらない<strong>素敵な</strong>言語仕様を持っている</li>
+<li>getbufvar()などでスコープへアクセス出来るため、<strong>聖域はほとんど無い</strong></li>
+</ul>
+<p><strong>正直今でも理解出来ていない。</strong></p></div></article></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"post":{"id":"2013-11-13-break-vim-beginners-scope","title":"Vim中級者を脱する スコープ編","date":"2013-11-13 17:26","content":"\u003cp\u003e個人的に、Vimで一番ハマったのが\u003cstrong\u003eスコープの問題\u003c/strong\u003eでした。\u003c/p\u003e\n\u003cp\u003evimrcのコピペばかりの、あなた。\u003c/p\u003e\n\u003cp\u003eせめて、よく登場するスコープだけでも理解してみましょう。\u003c/p\u003e\n\u003c!-- more --\u003e\n\u003ch1\u003eよく見るスコープ一覧\u003c/h1\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cem\u003eグローバル\u003c/em\u003eスコープ　\u003ccode\u003eg:\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cem\u003e関数内\u003c/em\u003eスコープ　\u003ccode\u003ea:\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cem\u003eスクリプト\u003c/em\u003eスコープ　\u003ccode\u003es:\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cem\u003eバッファ\u003c/em\u003eスコープ　\u003ccode\u003eb:\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003e\u003cem\u003e接頭辞なし\u003c/em\u003e　\u003ccode\u003elet huga=...\u003c/code\u003eなど\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2\u003eグローバル(g:)スコープ\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003eどこからでも参照できます。\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eプラグインの設定で見慣れたスコープですね。\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003elet g:neocomplete#enable_at_startup = 1\u003c/code\u003e\u003c/p\u003e\n\u003cp\u003e変数を初期化するには、次のようにします。\n大量のエラーコードによって操作できなくなるので、\u003cstrong\u003e嫌いな人のvimrcの末尾に書き込んでください。\u003c/strong\u003e\u003c/p\u003e\n\u003cdiv class=\"remark-highlight\"\u003e\u003cpre class=\"language-unknown\"\u003e\u003ccode class=\"language-unknown\"\u003efor key in keys(g:)\n  execute \u0026#x26;#39;unlet g:\u0026#x26;#39; . key\nendfor\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003ch2\u003e関数内(a:)スコープ\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003e関数内で、引数を参照するときに使用するスコープ\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e個人的に一番理解しがたいスコープです。\u003c/p\u003e\n\u003cp\u003eこんな感じで使います。他言語から移ってきた人には、正直使いづらい。\u003c/p\u003e\n\u003cdiv class=\"remark-highlight\"\u003e\u003cpre class=\"language-unknown\"\u003e\u003ccode class=\"language-unknown\"\u003efunction! Huga(first, second)\n  echo a:first\n  \u0026#x26;quot;=\u0026#x26;gt; \u0026#x26;#39;a\u0026#x26;#39;\n\n  echo a:\n  \u0026#x26;quot;=\u0026#x26;gt; {\u0026#x26;#39;0\u0026#x26;#39;: 0, \u0026#x26;#39;000\u0026#x26;#39;: [], \u0026#x26;#39;second\u0026#x26;#39;: \u0026#x26;#39;b\u0026#x26;#39;, \u0026#x26;#39;first\u0026#x26;#39;: \u0026#x26;#39;a\u0026#x26;#39;, \u0026#x26;#39;firstline\u0026#x26;#39;: 5, \u0026#x26;#39;lastline\u0026#x26;#39;: 5}\nendfunction\n\ncall Huga(\u0026#x26;#39;a\u0026#x26;#39;, \u0026#x26;#39;b\u0026#x26;#39;)\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cp\u003e「あーなるほど、\u003cstrong\u003e関数内でだけ有効なスコープなのか。\u003c/strong\u003e」\u003c/p\u003e\n\u003cp\u003eと、思っていたら\u003cem\u003eそれは間違い。\u003c/em\u003e\u003c/p\u003e\n\u003cp\u003e下記のようにすると、\u003cstrong\u003eグローバルスコープとして参照できます。\u003c/strong\u003e\u003c/p\u003e\n\u003cdiv class=\"remark-highlight\"\u003e\u003cpre class=\"language-unknown\"\u003e\u003ccode class=\"language-unknown\"\u003efunction! a:huga()\n  echo \u0026#x26;#39;Global!?!?!?\u0026#x26;#39;\nendfunction\n\ncall a:huga() \u0026#x26;quot; =\u0026#x26;gt; Global!?!?!?\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cp\u003e実は、これ関数名に\u003ccode\u003e:\u003c/code\u003eが許可されているだけです。\nなので実際は\u003ccode\u003ea:\u003c/code\u003eスコープは関係ないんだけど、分かりづらい。\u003c/p\u003e\n\u003ch2\u003eスクリプト(s:)スコープ\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003eファイル内でのみ有効なスコープ\u003c/strong\u003eです。\u003c/p\u003e\n\u003cp\u003eプラグインで、プライベートなメソッドや定数を作るときによく使います。\u003c/p\u003e\n\u003cdiv class=\"remark-highlight\"\u003e\u003cpre class=\"language-unknown\"\u003e\u003ccode class=\"language-unknown\"\u003elet s:script_scope = \u0026#x26;#39;外部からは参照できない\u0026#x26;#39;\nfunction! s:script_scope_method()\n  \u0026#x26;quot; プライベートメソッドとしてよく使われる\nendfunction\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cp\u003eこの\u003ccode\u003es:\u003c/code\u003eは、スクリプトがsourceされるときに置き換えられ、\u003ccode\u003e\u0026#x3C;SNR\u003e1_...\u003c/code\u003eという感じの形になります。\u003c/p\u003e\n\u003cp\u003eえぇ、そうです。すると、\u003cstrong\u003eグローバルなスコープとして参照できます。\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eこの\u003ccode\u003e\u0026#x3C;SNR\u003e\u003c/code\u003eの後にどの数値が割り振られているかは、\u003ccode\u003e:scriptnames\u003c/code\u003eで参照できます。\u003c/p\u003e\n\u003cp\u003eまた、\u003ccode\u003es:\u003c/code\u003eは\u003ccode\u003e\u0026#x3C;SID\u003e\u003c/code\u003eとして使えばスコープを超えて使用できるようになります。\u003c/p\u003e\n\u003cp\u003eマッピングの時に、scriptスコープを使う時などは必須ですね。\u003c/p\u003e\n\u003cdiv class=\"remark-highlight\"\u003e\u003cpre class=\"language-unknown\"\u003e\u003ccode class=\"language-unknown\"\u003ennoremap s :echo \u0026#x26;lt;SID\u0026#x26;gt;SID()\u0026#x26;lt;CR\u0026#x26;gt;\u003c/code\u003e\u003c/pre\u003e\u003c/div\u003e\n\u003cp\u003eただし、\u003cstrong\u003e変数は基本的には聖域\u003c/strong\u003eです。\u003c/p\u003e\n\u003ch2\u003eバッファ(b:)スコープ\u003c/h2\u003e\n\u003cp\u003e\u003cstrong\u003eバッファ単位のスコープ\u003c/strong\u003eです。\u003c/p\u003e\n\u003cp\u003eファイルタイプによる設定や、一時バッファによる変数などに使います。\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eファイルタイプの変更で、\u003ccode\u003eb:current_syntax\u003c/code\u003eなどが初期化\u0026#x26;格納されます\u003c/li\u003e\n\u003cli\u003eUniteを起動で、\u003ccode\u003eb:unite\u003c/code\u003eにデータが格納されます。\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eUniteのデバッグするときには、\u003ccode\u003eecho b:unite.candidates\u003c/code\u003eなどを参照しましょう。\u003c/p\u003e\n\u003cp\u003eあぁ、ようやくまともなスコープだ。\u003c/p\u003e\n\u003ch2\u003e接頭辞なし(\u003ccode\u003elet huga=\u003c/code\u003e)変数\u003c/h2\u003e\n\u003cp\u003eえぇ。\u003cstrong\u003eグローバルなスコープです。\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eお前もか！\u003c/p\u003e\n\u003cp\u003eマナーとしては、やはり\u003ccode\u003eg:\u003c/code\u003eで宣言したいところですが、\u003c/p\u003e\n\u003cp\u003eVimにデフォルトで入っているプラグインは、容赦なくこの変数を使ってきます。\u003c/p\u003e\n\u003cp\u003e\u003ccode\u003e:echo loaded_*\u0026#x3C;Tab\u003e\u003c/code\u003eなどすれば、奴らを見つけられるはずです。\u003c/p\u003e\n\u003cp\u003e細かいことを言えば、関数内ならばローカルスコープです。。。\u003c/p\u003e\n\u003ch2\u003eスコープのまとめ\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eスコープは\u003cstrong\u003eほとんどグローバルで参照できる\u003c/strong\u003e\u003c/li\u003e\n\u003cli\u003eVimLは枠にハマらない\u003cstrong\u003e素敵な\u003c/strong\u003e言語仕様を持っている\u003c/li\u003e\n\u003cli\u003egetbufvar()などでスコープへアクセス出来るため、\u003cstrong\u003e聖域はほとんど無い\u003c/strong\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003e正直今でも理解出来ていない。\u003c/strong\u003e\u003c/p\u003e"}},"__N_SSG":true},"page":"/posts/[id]","query":{"id":"2013-11-13-break-vim-beginners-scope"},"buildId":"pit76zWOBlRCTm3asO2wy","isFallback":false,"gsp":true}</script><script nomodule="" src="/_next/static/chunks/polyfills-8683bd742a84c1edd48c.js"></script><script src="/_next/static/chunks/webpack-0d9327d367da67cab38e.js" async=""></script><script src="/_next/static/chunks/framework-4921b1014669b85dd3db.js" async=""></script><script src="/_next/static/chunks/commons-8d0190730bd975b0bc62.js" async=""></script><script src="/_next/static/chunks/main-429af4e6fd9250d0e88a.js" async=""></script><script src="/_next/static/chunks/pages/_app-340e5e8fbf02bcf81997.js" async=""></script><script src="/_next/static/chunks/3-674deb72c571b248ccbe.js" async=""></script><script src="/_next/static/chunks/pages/posts/%5Bid%5D-c318ae8c65f3a72f51d1.js" async=""></script><script src="/_next/static/pit76zWOBlRCTm3asO2wy/_buildManifest.js" async=""></script><script src="/_next/static/pit76zWOBlRCTm3asO2wy/_ssgManifest.js" async=""></script></body></html>
