@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./prismjs";
+
+.pin {
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+}
+
+.pin-x {
+  right: 0!important;
+  left: 0!important;
+}
+
+// markdown
+.prose {
+  a {
+    text-decoration: underline;
+    color: #1d718f;
+    font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3',Meiryo,'メイリオ','ＭＳ Ｐゴシック', Helvetica, Arial, sans-serif;
+    transition: all .4s ease;
+    font-weight: normal;
+
+    &:hover {
+      color: #0062A0;
+      opacity: .8;
+    }
+  }
+
+  blockquote {
+    font-style: inherit;
+    color: rgb(96, 96, 96);
+    background: rgb(249, 249, 249);
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    p, img {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+    p {
+      &:before, &:after {
+        content: none !important;
+      }
+
+      img {
+        display: inline-block;
+      }
+    }
+  }
+}
