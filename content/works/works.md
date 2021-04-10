@@ -1,9 +1,8 @@
-# 最近の活動とか。
+# 最近の活動
 
-## 2017-2019
+## 2017-2021
 
-- 結婚
-- 第一子出産
+- 結婚、第一子、第二子の出産
 - [マネーフォワード株式会社 - マネーフォワードクラウド 勤怠](https://attendance.moneyforward.com/) サービス立ち上げ、テックリード
 
 ## 2015-2017
@@ -11,6 +10,7 @@
 - [ピクシブ株式会社 - pixivFACTORY](https://factory.pixiv.net/) サービス立ち上げ、メインエンジニア
 - [ピクシブ株式会社 - BOOTH](https://booth.pm/) APOLLOやった気がする
 - [ピクシブ株式会社 - Pawoo](https://pawoo.net/) mastodonのコントリビュータでtop3に一瞬入ってた
+- pixiv退職
 
 ## 2014
 
