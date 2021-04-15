@@ -12,4 +12,7 @@ module.exports = {
     }
     return config
   },
+  env: {
+    origin: 'https://alpaca.tc'
+  }
 }
