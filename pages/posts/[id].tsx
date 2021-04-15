@@ -2,10 +2,11 @@ import { ParsedUrlQuery } from 'querystring'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import { FunctionComponent } from 'react'
 import Head from 'next/head'
-import { getAllPosts, getPost } from '../../lib/posts'
-import { Post } from '../../types/PostMetadata'
+import { getAllPosts, getPost, sortPosts } from '../../lib/posts'
+import { Post, PostMetadata } from '../../types/PostMetadata'
 import Layout from '../../components/Layout'
 import PostHero from '../../components/PostHero'
+import PrevNextPostNav from '../../components/PrevNextPostNav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons'
 import { useRouter } from 'next/router'
@@ -15,7 +16,9 @@ interface Params extends ParsedUrlQuery {
 }
 
 type PostProps = {
-  post: Post
+  post: Post,
+  prevPost?: PostMetadata,
+  nextPost?: PostMetadata,
 }
 
 const currentUrl = (): string => {
@@ -39,7 +42,7 @@ const buildUrlForFacebook = (): string => {
 }
 
 const PostPage: FunctionComponent<PostProps> = (props) => {
-  const { post } = props
+  const { post, prevPost, nextPost } = props
   const urlForTwitter = buildUrlForTwitter(post)
   const urlForFacebook = buildUrlForFacebook()
 
@@ -66,6 +69,10 @@ const PostPage: FunctionComponent<PostProps> = (props) => {
             </a>
           </div>
         </article>
+
+        <aside className="max-w-3xl md:mt-6 mx-auto bg-white">
+          <PrevNextPostNav prevPost={prevPost} nextPost={nextPost} />
+        </aside>
       </Layout>
     </>
   )
@@ -86,9 +93,17 @@ export const getStaticProps: GetStaticProps<PostProps, Params> = async (
 ) => {
   const params = context.params as Params
   const post = await getPost(params.id) as Post
+  const allPosts = sortPosts(await getAllPosts())
+  const postIndex = allPosts.map(({ id }) => id).indexOf(post.id)
+  const prevPost = allPosts[postIndex - 1] || null
+  const nextPost = allPosts[postIndex + 1] || null
 
   return {
-    props: { post },
+    props: {
+      post,
+      prevPost,
+      nextPost
+    },
   }
 }
 

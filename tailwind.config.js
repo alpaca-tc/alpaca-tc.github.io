@@ -28,6 +28,9 @@ module.exports = {
           white: '#fff',
         },
       },
+      flex: {
+        half: '1 1 50%'
+      },
       typography: (theme) => ({
         default: {
           css: {
