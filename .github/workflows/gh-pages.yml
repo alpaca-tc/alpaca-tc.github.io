@@ -1,6 +1,5 @@
 name: github pages
 
-# masterブランチにプッシュしたときjobsに記述した操作を行う
 on:
   push:
     branches:
@@ -8,18 +7,15 @@ on:
 
 jobs:
   build-deploy:
-    # ubuntu OS を仮想マシン上に用意する
     runs-on: ubuntu-18.04
     steps:
     - uses: actions/checkout@v2
 
-    # Node.js環境のセットアップを行う
     - name: setup node
       uses: actions/setup-node@v1
       with:
         node-version: '15.x'
 
-    # npm install の際にキャッシュを使うよう設定
     - name: Cache dependencies
       uses: actions/cache@v1
       with:
@@ -28,22 +24,18 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
 
-    # package.jsonに基づき依存パッケージをインストールする
     - name: install
       run: yarn install
 
-    # Next.jsアプリをビルドする
-    # プロジェクトルート直下に.nextディレクトリができる
-    - name: build
-      run: yarn run build
-
-    # 静的なHTMLとしてNext.jsアプリを生成する
-    # プロジェクトルート直下にoutディレクトリができる
-    # そのなかに、HTMLファイル群と、それらが読み込むJSファイル群を収めた_nextディレクトリがある
     - name: export
       run: yarn run export
 
-    # しかしGitHub Pagesの仕様として_から始まるディレクトリが見えず404となる
+    # CNAMEファイルを元にカスタムドメインを設定するため、用意する
+    # https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
+    - name: Generate CNAME file
+      run: echo "alpaca.tc" > out/CNAME
+
+    # GitHub Pagesの仕様として_から始まるディレクトリが見えず404となる
     # つまりHTMLからJSを読み込めない
     # これを回避するために.nojekyllファイルをoutディレクトリに作る
     - name: add nojekyll
