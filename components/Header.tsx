@@ -73,7 +73,7 @@ const Header: FunctionComponent = () => {
                 GitHub
               </a>
               <a
-                href="https://twitter.com/alpaca-tc"
+                href="https://twitter.com/alpaca_tc"
                 className="text-gray-500 font-semibold no-underline hover:text-black"
                 target="_blank"
                 rel="noreferrer"
