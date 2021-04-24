@@ -154,7 +154,7 @@ const Header: FunctionComponent = () => {
           </a>
           <a
             onClick={headerState.closeHeader}
-            href="https://twitter.com/alpaca-tc"
+            href="https://twitter.com/alpaca_tc"
             className="block text-black font-bold no-underline"
             target="_blank"
             rel="noreferrer"
