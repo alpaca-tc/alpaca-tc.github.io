@@ -7,8 +7,10 @@ import { formatDate } from "../formatDate"
 const profileImage = readFileSync(`${__dirname}/../../public/images/profile.jpg`).toString('base64')
 const profileSource = `data:image/jpeg;base64, ${profileImage}`
 
-const rglr = readFileSync(`${__dirname}/_fonts/Inter-Regular.woff2`).toString('base64');
-const bold = readFileSync(`${__dirname}/_fonts/Inter-Bold.woff2`).toString('base64');
+const interRegular = readFileSync(`${__dirname}/_fonts/Inter-Regular.woff2`).toString('base64');
+const interBold = readFileSync(`${__dirname}/_fonts/Inter-Bold.woff2`).toString('base64');
+const notoBold = readFileSync(`${__dirname}/_fonts/NotoSansJP-Bold.otf`).toString('base64');
+const notoRegular = readFileSync(`${__dirname}/_fonts/NotoSansJP-Regular.otf`).toString('base64');
 
 const getCss = (): string => {
   const background = 'white';
@@ -30,18 +32,32 @@ const getCss = (): string => {
     font-family: 'Inter';
     font-style:  normal;
     font-weight: normal;
-    src: url(data:font/woff2;charset=utf-8;base64,${rglr}) format('woff2');
+    src: url(data:font/woff2;charset=utf-8;base64,${interRegular}) format('woff2');
   }
 
   @font-face {
     font-family: 'Inter';
     font-style:  normal;
     font-weight: bold;
-    src: url(data:font/woff2;charset=utf-8;base64,${bold}) format('woff2');
+    src: url(data:font/woff2;charset=utf-8;base64,${interBold}) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Noto';
+    font-style:  normal;
+    font-weight: normal;
+    src: url(data:font/otf;charset=utf-8;base64,${notoRegular}) format('otf');
+  }
+
+  @font-face {
+    font-family: 'Noto';
+    font-style:  normal;
+    font-weight: bold;
+    src: url(data:font/otf;charset=utf-8;base64,${notoBold}) format('otf');
   }
 
   body {
-    font-family: 'Inter';
+    font-family: 'Inter', 'Noto', sans-serif;
     background: ${footerBackground};
   }
 
