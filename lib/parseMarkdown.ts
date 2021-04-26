@@ -7,7 +7,7 @@ import stringify from "rehype-stringify"
 export const parseMarkdown = async (content: string): Promise<string> => {
   return (await unified()
     .use(markdown)
-    .use(highlight as typeof remark2rehype) // FIXME: 指定なしで動くように types/remark-prism.d.ts を修正する
+    .use(highlight)
     .use(remark2rehype, { allowDangerousHtml: true })
     .use(stringify, { allowDangerousHtml: true })
     .process(content))
