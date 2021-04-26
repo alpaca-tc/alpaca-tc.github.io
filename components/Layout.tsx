@@ -48,13 +48,13 @@ const Layout: FunctionComponent<LayoutProps> = ({
         <meta property="og:title" content={headTitle} />
         <meta property="og:locale" content="ja_JP"/>
         <meta property="og:image" content={ogImage}/>
-        <meta property="og:type" content="blog"/>
+        <meta property="og:type" content="article"/>
         <meta property="og:url" content={getCurrentUrl()}/>
         <meta property="og:site_name" content={defaultTitle}/>
         <meta property="og:description" content={description} />
         <meta property="fb:app_id" content="224701561024840" />
 
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={headTitle} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={ogImage} />
