@@ -41,17 +41,23 @@ const buildUrlForFacebook = (): string => {
   return url.href
 }
 
+const buildPath = (id: string): string => {
+  return `og-images/${id}.png`
+}
+
 const PostPage: FunctionComponent<PostProps> = (props) => {
   const { post, prevPost, nextPost } = props
   const urlForTwitter = buildUrlForTwitter(post)
   const urlForFacebook = buildUrlForFacebook()
+  const description = post.rawContent.replace(/[#\n]/g, '').slice(0, 160)
+  const ogImage = `https://alpaca.tc/${buildPath(post.id)}`
 
   return (
     <>
       <Head>
         <title>{post.title}</title>
       </Head>
-      <Layout title={post.title}>
+      <Layout title={post.title} ogImage={ogImage} description={description}>
         <article className="max-w-3xl md:mt-6 rounded-xl mx-auto bg-white dark:bg-cool-gray-800">
           <PostHero post={post} />
           <div

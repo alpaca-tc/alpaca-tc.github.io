@@ -1,10 +1,11 @@
 declare module 'remark-prism' {
-  import { Plugin } from 'unified'
+  import { Plugin, Processor } from 'unified'
 
-  type RemarkPrismOptions = {
+  export type RemarkPrismOptions = {
     transformInlineCode?: boolean
   }
 
-  /* eslint @typescript-eslint/no-empty-interface: "off" */
-  interface Parse extends Plugin<[RemarkPrismOptions?]> {}
+  const remarkPrism: Plugin<[RemarkPrismOptions?] | [Processor?, RemarkPrismOptions?]>
+
+  export default remarkPrism
 }

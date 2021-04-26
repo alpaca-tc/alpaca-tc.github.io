@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 type LayoutProps = {
   children: React.ReactNode
   title?: string
+  ogImage?: string
   description?: string
 }
 
@@ -23,6 +24,7 @@ const getCurrentUrl = (): string => {
 const Layout: FunctionComponent<LayoutProps> = ({
   children,
   title,
+  ogImage = "https://alpaca.tc/images/common/profile.jpg",
   description = defaultDescription
 }) => {
   const headerState = useHeaderState()
@@ -45,7 +47,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
 
         <meta property="og:title" content={headTitle} />
         <meta property="og:locale" content="ja_JP"/>
-        <meta property="og:image" content="https://alpaca.tc/images/common/profile.jpg"/>
+        <meta property="og:image" content={ogImage}/>
         <meta property="og:type" content="blog"/>
         <meta property="og:url" content={getCurrentUrl()}/>
         <meta property="og:site_name" content={defaultTitle}/>
@@ -55,7 +57,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:title" content={headTitle} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content="https://alpaca.tc/images/meta/twitter.jpg" />
+        <meta name="twitter:image" content={ogImage} />
         <meta name="twitter:site" content="@alpaca_tc" />
         <meta name="twitter:creator" content="@alpaca_tc" />
       </Head>
