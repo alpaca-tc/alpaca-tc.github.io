@@ -46,14 +46,14 @@ const getCss = (): string => {
     font-family: 'Noto';
     font-style:  normal;
     font-weight: normal;
-    src: url(data:font/otf;charset=utf-8;base64,${notoRegular}) format('otf');
+    src: url(data:font/otf;charset=utf-8;base64,${notoRegular}) format('opentype');
   }
 
   @font-face {
     font-family: 'Noto';
     font-style:  normal;
     font-weight: bold;
-    src: url(data:font/otf;charset=utf-8;base64,${notoBold}) format('otf');
+    src: url(data:font/otf;charset=utf-8;base64,${notoBold}) format('opentype');
   }
 
   body {
