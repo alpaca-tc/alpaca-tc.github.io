@@ -39,8 +39,9 @@ const parsePostMetaData = async (id: string): Promise<PostMetadata> => {
 const parsePost = async (id: string): Promise<Post> => {
   const postMetadata = await parsePostMetaData(id)
   const matterResult = readMarkdown(id)
-  const content = await parseMarkdown(matterResult.content)
-  const post = Object.assign(postMetadata, { content }) as Post
+  const rawContent = matterResult.content
+  const content = await parseMarkdown(rawContent)
+  const post = Object.assign(postMetadata, { content, rawContent }) as Post
 
   return post
 }
