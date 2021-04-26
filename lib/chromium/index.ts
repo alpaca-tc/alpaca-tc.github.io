@@ -19,7 +19,7 @@ const getPage = async (): Promise<core.Page> => {
 export const WIDTH = 1200
 export const HEIGHT = 626
 
-export const getScreenshot = async (html: string, type: ScreenshotOptions['type']) => {
+export const getScreenshot = async (html: string, type: ScreenshotOptions['type']): Promise<Buffer> => {
   const page = await getPage();
 
   await page.setViewport({ width: WIDTH, height: HEIGHT });

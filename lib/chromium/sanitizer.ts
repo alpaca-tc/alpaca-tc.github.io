@@ -7,7 +7,8 @@ const entityMap: { [key: string]: string } = {
   "/": '&#x2F;'
 };
 
-export const sanitizeHtml = (html: string) => {
+export const sanitizeHtml = (html: string): string => {
+  /* eslint-disable no-useless-escape */
   return html.replace(/[&<>"'\/]/g, key => entityMap[key]);
 }
 

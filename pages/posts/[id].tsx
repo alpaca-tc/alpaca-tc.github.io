@@ -41,7 +41,7 @@ const buildUrlForFacebook = (): string => {
   return url.href
 }
 
-const buildPath = (id: string, date: string): string => {
+const buildPath = (id: string): string => {
   return `og-images/${id}.png`
 }
 
@@ -50,7 +50,7 @@ const PostPage: FunctionComponent<PostProps> = (props) => {
   const urlForTwitter = buildUrlForTwitter(post)
   const urlForFacebook = buildUrlForFacebook()
   const description = post.rawContent.replace(/[#\n]/g, '').slice(0, 160)
-  const ogImage = `https://alpaca.tc/${buildPath(post.id, post.date)}`
+  const ogImage = `https://alpaca.tc/${buildPath(post.id)}`
 
   return (
     <>
