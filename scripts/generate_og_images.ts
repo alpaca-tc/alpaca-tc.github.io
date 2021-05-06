@@ -2,6 +2,7 @@ import fs from 'fs'
 import { join } from 'path'
 import { getAllPosts } from "../lib/posts"
 import { generateOgImage } from "../lib/ogImage"
+import { eachLimit } from "../lib/eachLimit"
 
 const baseDir = 'public/og-images'
 
@@ -20,7 +21,7 @@ const preflight = async (): Promise<void> => {
 
   const posts = await getAllPosts()
 
-  const promises = posts.map(async ({ id, title, date }) => {
+  eachLimit(posts, 3, async ({ id, title, date }) => {
     const fileName = `${id}.png`
     const buf = await generateOgImage(title, date)
     const distPath = join(baseDir, fileName)
@@ -28,9 +29,7 @@ const preflight = async (): Promise<void> => {
     console.log(`== Write ${distPath}`)
 
     await fs.promises.writeFile(distPath, buf, 'ascii')
-  })
-
-  Promise.all(promises).then(() => {
+  }).then(() => {
     console.log("== Done")
     process.exit()
   })
