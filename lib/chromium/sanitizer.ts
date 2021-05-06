@@ -4,6 +4,7 @@ const entityMap: { [key: string]: string } = {
   ">": "&gt;",
   '"': '&quot;',
   "'": '&#39;',
+  "-": "&hyphen;",
   "/": '&#x2F;'
 };
 

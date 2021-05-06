@@ -79,7 +79,7 @@ categories: diary
 
 ## 7. 驚異の防臭袋 BOS (ボス) おむつが臭わない袋
 
-<img class="image_on_frame center" src="/images/blog/childcare-supplies/bos.jpg" alt="驚異の防臭袋 BOS (ボス) おむつが臭わない袋" />
+<img class="image_on_frame center" src="/images/blog/childcare-supplies/BOS.jpg" alt="驚異の防臭袋 BOS (ボス) おむつが臭わない袋" />
 
 言わずとしれた、おむつ処理袋のベストセラーですね。  
 長女が大きくなってからはブツの臭いがおむつのゴミ箱から漏れて大変でした。  
