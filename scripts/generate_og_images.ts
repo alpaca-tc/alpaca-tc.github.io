@@ -21,7 +21,7 @@ const preflight = async (): Promise<void> => {
 
   const posts = await getAllPosts()
 
-  eachLimit(posts, 3, async ({ id, title, date }) => {
+  eachLimit(posts, 1, async ({ id, title, date }) => {
     const fileName = `${id}.png`
     const buf = await generateOgImage(title, date)
     const distPath = join(baseDir, fileName)
