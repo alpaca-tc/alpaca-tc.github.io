@@ -1,5 +1,5 @@
 ---
-title: nextjsの静的配信ブログで自前生成のog-imageを配信する
+title: nextjsの静的配信ブログで自前生成のogimageを配信する
 date: 2021-05-07 20:00
 categories: diary
 ---
