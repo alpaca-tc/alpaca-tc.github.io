@@ -104,7 +104,7 @@ titles.forEach(async ({ title }) => {
 <img class="image_on_frame center" src="/og-images/2021-05-07-generated-og-image.png" alt="nextjsの静的配信ブログでog-imageを配信する" />
 
 なお、いくつか細かい処理を省略しているので、実際の処理についてはgithubを見てください
-[alpaca-tc/alpaca-tc.github.io](https://github.com/alpaca-tc/alpaca-tc.github.io/blob/master/scripts/generate_og_image.ts)
+[alpaca-tc/alpaca-tc.github.io](https://github.com/alpaca-tc/alpaca-tc.github.io/blob/master/scripts/generate_og_images.ts)
 
 ## 感想
 
