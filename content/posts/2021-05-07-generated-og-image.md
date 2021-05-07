@@ -4,7 +4,7 @@ date: 2021-05-07 20:00
 categories: diary
 ---
 
-og-imageってなんだっけというと、記事をシェアする際に画面に表示されるコレです。
+og-imageってなんだっけというと、記事をシェアする際に表示される画像です。
 
 <img class="image_on_frame center" src="https://opengraph.githubassets.com/0a2f84a49c6dded83bcddc8e522ca657eccedcb932ac44fa89733e8a6afeb8ee/alpaca-tc/alpaca-tc.github.io/pull/7" alt="参考のog-image" />
 
@@ -28,7 +28,7 @@ zenn.devといいGitHubといい、最近はコンテンツの内容を元に動
 <meta name="twitter:img:src" content="https://og-image.vercel.app/hello_world.png">
 ```
 
-このやり方は、URLを指定するだけでog-imageを作ることができるので楽ちんです。
+このやり方は、URLを指定するだけでog-imageを生成できるので楽ちんです。
 
 ## og-imageを自前で生成する
 
@@ -101,7 +101,7 @@ titles.forEach(async ({ title }) => {
 あとはこれを実行すれば、og-imageの出来上がりです。
 それっぽい画像を作ることができました。
 
-<img class="image_on_frame center" src="/og-images/2021-05-06-generated-og-images.png" alt="nextjsの静的配信ブログでog-imageを配信する" />
+<img class="image_on_frame center" src="/og-images/2021-05-07-generated-og-image.png" alt="nextjsの静的配信ブログでog-imageを配信する" />
 
 なお、いくつか細かい処理を省略しているので、実際の処理についてはgithubを見てください
 [alpaca-tc/alpaca-tc.github.io](https://github.com/alpaca-tc/alpaca-tc.github.io/blob/master/scripts/generate_og_image.ts)
