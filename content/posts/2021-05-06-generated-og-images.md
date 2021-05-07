@@ -1,10 +1,10 @@
 ---
 title: nextjsの静的配信ブログで自前生成のog-imageを配信する
-date: 2021-05-06 20:00
+date: 2021-05-07 20:00
 categories: diary
 ---
 
-og-imageってなんだっけというと、記事をシェアする際に画面に表示されるコレです。  
+og-imageってなんだっけというと、記事をシェアする際に画面に表示されるコレです。
 
 <img class="image_on_frame center" src="https://opengraph.githubassets.com/0a2f84a49c6dded83bcddc8e522ca657eccedcb932ac44fa89733e8a6afeb8ee/alpaca-tc/alpaca-tc.github.io/pull/7" alt="参考のog-image" />
 
@@ -32,14 +32,14 @@ zenn.devといいGitHubといい、最近はコンテンツの内容を元に動
 
 ## og-imageを自前で生成する
 
-このブログはNext.jsで書かれており、`next export` で出力したHTMLをgithub pagesで配信しています。  
+このブログはNext.jsで書かれており、`next export` で出力したHTMLをgithub pagesで配信しています。
 先ほど紹介したようなマイクロサービスのやり方だと、管理するhostが増えるのでgithub pagesの旨味がなくなります。
 
 そこで、このブログでは古典的なデプロイ時にog-imageを生成する戦略を取りました。
 
-### どうやってog-imageを生成しているか 
+### どうやってog-imageを生成しているか
 
-このブログではheadless Chromeの[puppeteer](https://github.com/puppeteer/puppeteer)を使っています。  
+このブログではheadless Chromeの[puppeteer](https://github.com/puppeteer/puppeteer)を使っています。
 
 いい感じにスタイルをあてたHTMLをChromeに喰わせて、レンダリングされた画面をpngに変換する画像生成を行っています。
 下記のように、HTMLを生成する処理と、HTMLからpngに変換する処理を実行することで、簡単に画像生成ができます。
@@ -98,15 +98,15 @@ titles.forEach(async ({ title }) => {
 })
 ```
 
-あとはこれを実行すれば、og-imageの出来上がりです。  
+あとはこれを実行すれば、og-imageの出来上がりです。
 それっぽい画像を作ることができました。
 
 <img class="image_on_frame center" src="/og-images/2021-05-06-generated-og-images.png" alt="nextjsの静的配信ブログでog-imageを配信する" />
 
-なお、いくつか細かい処理を省略しているので、実際の処理についてはgithubを見てください  
+なお、いくつか細かい処理を省略しているので、実際の処理についてはgithubを見てください
 [alpaca-tc/alpaca-tc.github.io](https://github.com/alpaca-tc/alpaca-tc.github.io/blob/master/scripts/generate_og_images.ts)
 
 ## 感想
 
-今回自前で処理を書くにあたって、世の中のマイクロサービスを眺めてみたんですが、どれも似たようなものでした。  
+今回自前で処理を書くにあたって、世の中のマイクロサービスを眺めてみたんですが、どれも似たようなものでした。
 この処理をマイクロサービスに移せば、og-imageの動的生成もできるので、案外そんなものだったのかと思いました。
