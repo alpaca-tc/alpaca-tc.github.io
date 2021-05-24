@@ -12,6 +12,9 @@ const preflight = async (): Promise<void> => {
   }
 
   await fs.promises.mkdir(baseDir)
+
+  // warm up
+  await generateOgImage('test', '2020-01-01')
 }
 
 ;(async () => {
