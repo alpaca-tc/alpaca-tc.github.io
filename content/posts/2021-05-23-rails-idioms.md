@@ -1,10 +1,10 @@
 ---
-title: Railsプロジェクトの便利集
+title: Railsプロジェクトで好んで使っている便利な処理
 date: 2021-05-23 20:00
 categories: diary
 ---
 
-Railsプロジェクトで、自分が好んで使っている便利なものをまとめてみました。
+Railsプロジェクトで、自分が好んで使っている便利な処理をまとめてみました。
 
 ## core_ext編
 
@@ -54,7 +54,7 @@ Railsプロジェクトで、自分が好んで使っている便利なものを
 
 ### クエリに呼び出し元を含める
 
-<a target="_blank" href="marginalia">marginalia</a>みたい処理のミニマム版  
+<a target="_blank" href="marginalia">marginalia</a>みたい処理のミニマム版
 <a target="_blank" href="https://gist.github.com/alpaca-tc/97b875d63e0e798537e0e3d5c234e0b5">https://gist.github.com/alpaca-tc/97b875d63e0e798537e0e3d5c234e0b5</a>
 
 ### カラムの値がtrue/falseのいずれかであることを保証するvalidator
