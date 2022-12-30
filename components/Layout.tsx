@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useHeaderState } from '../context/header'
 import Header from './Header'
 import { FunctionComponent } from "react"
-import { useRouter } from 'next/router'
+import { useCurrentUrl } from '../hooks/useCurrentUrl'
 
 type LayoutProps = {
   children: React.ReactNode
@@ -13,13 +13,6 @@ type LayoutProps = {
 
 const defaultTitle = 'alpaca-tc'
 const defaultDescription = ''
-
-const getCurrentUrl = (): string => {
-  const router = useRouter();
-  const origin = 'https://alpaca.tc'
-
-  return `${origin}${router.asPath}`
-}
 
 const Layout: FunctionComponent<LayoutProps> = ({
   children,
@@ -33,6 +26,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
     : '';
 
   const headTitle = title ? [title, defaultTitle].join(' - ') : defaultTitle;
+  const currentUrl = useCurrentUrl()
 
   return (
     <div className={`py-8 lg:py-16 px-6 md:px-16 lg:px-24 ${bodyClassName}`}>
@@ -49,7 +43,7 @@ const Layout: FunctionComponent<LayoutProps> = ({
         <meta property="og:locale" content="ja_JP"/>
         <meta property="og:image" content={ogImage}/>
         <meta property="og:type" content="article"/>
-        <meta property="og:url" content={getCurrentUrl()}/>
+        <meta property="og:url" content={currentUrl}/>
         <meta property="og:site_name" content={defaultTitle}/>
         <meta property="og:description" content={description} />
         <meta property="fb:app_id" content="224701561024840" />

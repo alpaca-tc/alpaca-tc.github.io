@@ -9,7 +9,6 @@ import PostHero from '../../components/PostHero'
 import PrevNextPostNav from '../../components/PrevNextPostNav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons'
-import { useRouter } from 'next/router'
 
 interface Params extends ParsedUrlQuery {
   id: string
@@ -21,22 +20,17 @@ type PostProps = {
   nextPost?: PostMetadata,
 }
 
-const currentUrl = (): string => {
-  const router = useRouter()
-  return `${process.env.origin}${router.asPath}`
-}
-
-const buildUrlForTwitter = (post: Post): string => {
+const buildUrlForTwitter = (currentUrl: string, post: Post): string => {
   const url = new URL("https://twitter.com/share")
-  url.searchParams.append('url', currentUrl())
+  url.searchParams.append('url', currentUrl)
   url.searchParams.append('text', `${post.title} | `)
 
   return url.href
 }
 
-const buildUrlForFacebook = (): string => {
+const buildUrlForFacebook = (currentUrl: string): string => {
   const url = new URL("https://www.facebook.com/share.php")
-  url.searchParams.append('u', currentUrl())
+  url.searchParams.append('u', currentUrl)
 
   return url.href
 }
@@ -47,8 +41,9 @@ const buildPath = (id: string): string => {
 
 const PostPage: FunctionComponent<PostProps> = (props) => {
   const { post, prevPost, nextPost } = props
-  const urlForTwitter = buildUrlForTwitter(post)
-  const urlForFacebook = buildUrlForFacebook()
+  const currentUrl = useCurrentUrl()
+  const urlForTwitter = buildUrlForTwitter(currentUrl, post)
+  const urlForFacebook = buildUrlForFacebook(currentUrl)
   const description = post.rawContent.replace(/[#\n]/g, '').slice(0, 160)
   const ogImage = `https://alpaca.tc/${buildPath(post.id)}`
 

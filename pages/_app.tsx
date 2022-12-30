@@ -3,15 +3,15 @@ import { AppProps } from 'next/app'
 import { HeaderProvider } from '../context/header'
 import Head from 'next/head'
 import { GA_ID } from "../lib/gtag"
-import withPageView from "../hooks/withPageView"
+import usePageView from "../hooks/usePageView"
+import Script from "next/script"
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
-  withPageView()
+  usePageView()
 
   return (
     <HeaderProvider>
       <Head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-44082439-2"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
@@ -25,6 +25,7 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
         >
         </script>
       </Head>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-44082439-2" />
 
       <Component {...pageProps} />
     </HeaderProvider>
