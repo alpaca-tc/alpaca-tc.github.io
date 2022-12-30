@@ -13,6 +13,6 @@ export const eachLimit = async <T>(
   items: Array<T>,
   limit: number,
   fn: CallbackFunction<T>,
-) => {
+): Promise<void[]> => {
   return await Promise.all([...Array(limit)].map(() => runner<T>(items, fn)));
 };
