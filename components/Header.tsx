@@ -21,7 +21,7 @@ const Header: FunctionComponent = () => {
                 <a className="flex items-center no-underline">
                   <Image
                     src="/images/profile.jpg"
-                    alt=""
+                    alt="プロフィール画像"
                     className="rounded-full"
                     width="100%"
                     height="100%"

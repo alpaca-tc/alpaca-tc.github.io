@@ -1,12 +1,16 @@
 import { FunctionComponent } from "react"
-import { ImageProps as NextImageProps } from "next/image"
 
 type ImageProps = {
-} & NextImageProps
+  alt: string
+  src: string
+  width: string
+  height: string
+  className: string
+}
 
-const Image: FunctionComponent<ImageProps> = ({ src, width, height, className }) => {
+const Image: FunctionComponent<ImageProps> = ({ alt, src, width, height, className }) => {
   return (
-    <img className={className} src={src} width={width} height={height} />
+    <img className={className} alt={alt} src={src} width={width} height={height} />
   )
 }
 

@@ -1,11 +1,18 @@
-type CallbackFunction = (value: any) => Promise<void>
+type CallbackFunction<T> = (value: T) => Promise<void>;
 
-const runner = async (items: Array<any>, fn: CallbackFunction) => {
+const runner = async <T>(items: Array<T>, fn: CallbackFunction<T>) => {
   while (items.length > 0) {
-    await fn(items.pop());
+    const val = items.pop();
+    if (val !== undefined) {
+      await fn(val);
+    }
   }
-}
+};
 
-export const eachLimit = async (items: Array<any>, limit: number, fn: CallbackFunction) => {
-  return Promise.all([...Array(limit)].map(() => runner(items, fn)));
-}
+export const eachLimit = async <T>(
+  items: Array<T>,
+  limit: number,
+  fn: CallbackFunction<T>,
+) => {
+  return await Promise.all([...Array(limit)].map(() => runner<T>(items, fn)));
+};
