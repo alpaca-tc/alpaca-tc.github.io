@@ -9,7 +9,7 @@
     "dev": "next dev -p 3002",
     "build": "next build",
     "start": "next start",
-    "generateOgImages": "ts-node --project tsconfig.scripts.json scripts/generate_og_images.ts",
+    "generateOgImages": "ts-node scripts/generate_og_images.ts",
     "export": "yarn run generateOgImages && next build && next export",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix ."

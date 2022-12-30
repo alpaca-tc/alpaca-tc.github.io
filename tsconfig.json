@@ -1,4 +1,13 @@
 {
+  "ts-node": {
+    "compilerOptions": {
+      "target": "ES2017",
+      "module": "commonjs",
+      "paths": {
+        "*": ["types/*", "*"]
+      }
+    }
+  },
   "compilerOptions": {
     "target": "es5",
     "lib": [
