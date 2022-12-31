@@ -3,6 +3,11 @@ import { sanitizeHtml } from '../chromium/sanitizer';
 import { getScreenshot } from "../chromium"
 import { HEIGHT, WIDTH } from "../../lib/chromium"
 import { formatDate } from "../formatDate"
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const profileImage = readFileSync(`${__dirname}/../../public/images/profile.jpg`).toString('base64')
 const profileSource = `data:image/jpeg;base64, ${profileImage}`

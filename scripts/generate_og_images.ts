@@ -9,7 +9,7 @@ const baseDir = "public/og-images";
 
 const preflight = async (): Promise<void> => {
   if (fs.existsSync(baseDir)) {
-    await fs.promises.rmdir(baseDir, { recursive: true });
+    await fs.promises.rm(baseDir, { recursive: true });
   }
 
   await fs.promises.mkdir(baseDir);
@@ -38,4 +38,4 @@ const preflight = async (): Promise<void> => {
   });
 })();
 
-export {};
+export { };

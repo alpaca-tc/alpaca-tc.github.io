@@ -1,12 +1,7 @@
 {
   "ts-node": {
-    "compilerOptions": {
-      "target": "ES2017",
-      "module": "commonjs",
-      "paths": {
-        "*": ["types/*", "*"]
-      }
-    }
+    "files": true,
+    "require": ["tsconfig-paths/register"]
   },
   "compilerOptions": {
     "target": "es5",
@@ -26,10 +21,12 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
+    "baseUrl": ".",
     "typeRoots": [
       "node_modules/@types",
       "types"
-    ]
+    ],
+    "incremental": true
   },
   "include": [
     "next-env.d.ts",
