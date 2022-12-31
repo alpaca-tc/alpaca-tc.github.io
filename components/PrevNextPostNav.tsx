@@ -10,42 +10,38 @@ type PrevNextPostNavProps = {
 
 const PrevNextPostNav: FunctionComponent<PrevNextPostNavProps> = ({ prevPost, nextPost }) => {
   const prevPostLink = prevPost ? (
-    <Link href={`/posts/${prevPost.id}`}>
-      <a className="block lg:flex-half text-gray-600 transition duration-300 hover:text-gray-900 mt-1 mb-1 pt-4 pb-4 border border-solid border-l-0 border-r-0 border-b-0">
-        <div>
-          <span className="block text-gray-500 uppercase font-semibold text-xs tracking-wide mb-2 no-underline">
-            前の記事
-          </span>
+    <Link href={`/posts/${prevPost.id}`} className="block lg:flex-half text-gray-600 transition duration-300 hover:text-gray-900 mt-1 mb-1 pt-4 pb-4 border border-solid border-l-0 border-r-0 border-b-0">
+      <div>
+        <span className="block text-gray-500 uppercase font-semibold text-xs tracking-wide mb-2 no-underline">
+          前の記事
+        </span>
 
-          <span className="block text-gray-500 uppercase text-xs tracking-wide no-underline">
-            {dayjs(prevPost.date).format('YYYY-MM-DD')}
-          </span>
+        <span className="block text-gray-500 uppercase text-xs tracking-wide no-underline">
+          {dayjs(prevPost.date).format('YYYY-MM-DD')}
+        </span>
 
-          <div className="underline">
-            {prevPost.title}
-          </div>
+        <div className="underline">
+          {prevPost.title}
         </div>
-      </a>
+      </div>
     </Link>
   ) : null
 
   const nextPostLink = nextPost ? (
-    <Link href={`/posts/${nextPost.id}`}>
-      <a className="block lg:flex-half text-gray-700 transition duration-300 hover:text-gray-900 mt-1 mb-1 pt-4 pb-4 border border-solid border-l-0 border-r-0 border-b-0">
-        <div>
-          <span className="block text-gray-500 uppercase font-semibold text-xs tracking-wide mb-2 no-underline">
-            次の記事
-          </span>
+    <Link href={`/posts/${nextPost.id}`} className="block lg:flex-half text-gray-700 transition duration-300 hover:text-gray-900 mt-1 mb-1 pt-4 pb-4 border border-solid border-l-0 border-r-0 border-b-0">
+      <div>
+        <span className="block text-gray-500 uppercase font-semibold text-xs tracking-wide mb-2 no-underline">
+          次の記事
+        </span>
 
-          <span className="block text-gray-500 uppercase text-xs tracking-wide no-underline">
-            {dayjs(nextPost.date).format('YYYY-MM-DD')}
-          </span>
+        <span className="block text-gray-500 uppercase text-xs tracking-wide no-underline">
+          {dayjs(nextPost.date).format('YYYY-MM-DD')}
+        </span>
 
-          <div className="underline">
-            {nextPost.title}
-          </div>
+        <div className="underline">
+          {nextPost.title}
         </div>
-      </a>
+      </div>
     </Link>
   ) : null
 

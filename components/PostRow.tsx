@@ -13,10 +13,8 @@ const PostRow: FunctionComponent<PostRowProps> = ({ post }) => {
       <span className="block text-gray-500 uppercase font-semibold text-xs tracking-wide mb-1">
         {dayjs(post.date).format('YYYY-MM-DD')}
       </span>
-      <Link href={`/posts/${post.id}`}>
-        <a className="text-lg text-black font-bold no-underline hover:underline">
-          {post.title}
-        </a>
+      <Link href={`/posts/${post.id}`} className="text-lg text-black font-bold no-underline hover:underline">
+        {post.title}
       </Link>
     </div>
   )

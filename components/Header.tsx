@@ -18,7 +18,7 @@ const Header: FunctionComponent = () => {
           <div className="mb-0 md:mb-4 lg:mb-0 flex flex-shrink-0 pr-4 md:pr-6 lg:pr-12">
             <Link href="/">
               <div className="inline-block h-10 w-10 md:h-12 md:w-12 lg:h-20 lg:w-20">
-                <a className="flex items-center no-underline">
+                <span className="flex items-center no-underline">
                   <Image
                     src="/images/profile.jpg"
                     alt="プロフィール画像"
@@ -26,16 +26,14 @@ const Header: FunctionComponent = () => {
                     width="100%"
                     height="100%"
                   />
-                </a>
+                </span>
               </div>
             </Link>
           </div>
 
           <div>
-            <Link href="/">
-              <a className="block text-black no-underline font-bold text-xl lg:text-3xl font-extrabold leading-none lg:leading-tight">
-                alpaca-tc
-              </a>
+            <Link href="/" className="block text-black no-underline font-bold text-xl lg:text-3xl font-extrabold leading-none lg:leading-tight">
+              alpaca-tc
             </Link>
 
             <div className="hidden md:flex mt-3 lg:mt-4 uppercase tracking-wide text-xs space-x-6">
@@ -43,26 +41,23 @@ const Header: FunctionComponent = () => {
                 href="/"
                 hrefRe={postPathRe}
                 activeClassName="text-black font-semibold no-underline hover:text-black"
+                className="text-gray-500 font-semibold no-underline hover:text-black"
               >
-                <a className="text-gray-500 font-semibold no-underline hover:text-black">
-                  Posts
-                </a>
+                Posts
               </ActiveLink>
               <ActiveLink
                 href="/about_me"
                 activeClassName="text-black font-semibold no-underline hover:text-black"
+                className="text-gray-500 font-semibold no-underline hover:text-black"
               >
-                <a className="text-gray-500 font-semibold no-underline hover:text-black">
-                  About Me
-                </a>
+                About Me
               </ActiveLink>
               <ActiveLink
                 href="/works"
                 activeClassName="text-black font-semibold no-underline hover:text-black"
+                className="text-gray-500 font-semibold no-underline hover:text-black"
               >
-                <a className="text-gray-500 font-semibold no-underline hover:text-black">
-                  Works
-                </a>
+                Works
               </ActiveLink>
               <a
                 href="https://github.com/alpaca-tc"
@@ -116,31 +111,28 @@ const Header: FunctionComponent = () => {
         }`}
       >
         <div className="space-y-8 overflow-y-auto pt-6 pb-8 px-12 max-h-full overflow-y-auto">
-          <Link href="/">
-            <a
-              onClick={headerState.closeHeader}
-              className="block text-black font-bold no-underline"
-            >
-              Posts
-            </a>
+          <Link
+            href="/"
+            onClick={headerState.closeHeader}
+            className="block text-black font-bold no-underline"
+          >
+            Posts
           </Link>
 
-          <Link href="/about_me">
-            <a
-              onClick={headerState.closeHeader}
-              className="block text-black font-bold no-underline"
-            >
-              About Me
-            </a>
+          <Link
+            href="/about_me"
+            onClick={headerState.closeHeader}
+            className="block text-black font-bold no-underline"
+          >
+            About Me
           </Link>
 
-          <Link href="/works">
-            <a
-              onClick={headerState.closeHeader}
-              className="block text-black font-bold no-underline"
-            >
-              Works
-            </a>
+          <Link
+            href="/works"
+            onClick={headerState.closeHeader}
+            className="block text-black font-bold no-underline"
+          >
+            Works
           </Link>
 
           <a

@@ -61,8 +61,9 @@ const Pagination: FunctionComponent<Props> = ({
           <Link
             href={`${basePath}/${page}`}
             key={page}
+            className={`relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 ${currentPage === page ? 'bg-gray-100' : ''}`}
           >
-            <a className={`relative inline-flex items-center px-4 py-2 border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 ${currentPage === page ? 'bg-gray-100' : ''}`}>{page}</a>
+            {page}
           </Link>
         ))}
 

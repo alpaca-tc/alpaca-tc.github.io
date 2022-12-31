@@ -3,22 +3,21 @@ import Link, { LinkProps } from 'next/link'
 import React, { ReactElement, FunctionComponent } from 'react'
 
 type ActiveLinkProps = {
-  children: ReactElement
+  children: ReactElement | string
+  className?: string
   hrefRe?: RegExp
   activeClassName?: string
 } & LinkProps
 
-const ActiveLink: FunctionComponent<ActiveLinkProps> = ({ children, hrefRe, activeClassName, ...props }) => {
+const ActiveLink: FunctionComponent<ActiveLinkProps> = ({ children, hrefRe, activeClassName, className, ...props }) => {
   const { href } = props
   const router = useRouter()
-  const child = React.Children.only(children)
 
-  const className =
-    ((hrefRe && hrefRe.test(router.pathname)) || router.pathname === href)
-      ? activeClassName
-      : child.props.className
+  if ((hrefRe && hrefRe.test(router.pathname)) || router.pathname === href) {
+    className = activeClassName + String(className)
+  }
 
-  return <Link {...props}>{React.cloneElement(child, { className })}</Link>
+  return <Link {...props} className={className}>{children}</Link>
 }
 
 export default ActiveLink
