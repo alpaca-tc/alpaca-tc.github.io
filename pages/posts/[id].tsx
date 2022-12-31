@@ -9,6 +9,7 @@ import PostHero from '../../components/PostHero'
 import PrevNextPostNav from '../../components/PrevNextPostNav'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebook } from '@fortawesome/free-brands-svg-icons'
+import { useCurrentUrl } from '../../hooks/useCurrentUrl'
 
 interface Params extends ParsedUrlQuery {
   id: string
