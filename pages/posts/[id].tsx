@@ -1,6 +1,5 @@
 import { ParsedUrlQuery } from 'querystring'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { FunctionComponent } from 'react'
 import Head from 'next/head'
 import { getAllPosts, getPost, sortPosts } from '../../lib/posts'
 import { Post, PostMetadata } from '../../types/PostMetadata'
@@ -40,7 +39,7 @@ const buildPath = (id: string): string => {
   return `og-images/${id}.png`
 }
 
-const PostPage: FunctionComponent<PostProps> = (props) => {
+const PostPage: React.FC<PostProps> = (props) => {
   const { post, prevPost, nextPost } = props
   const currentUrl = useCurrentUrl()
   const urlForTwitter = buildUrlForTwitter(currentUrl, post)

@@ -1,6 +1,5 @@
 import { ParsedUrlQuery } from 'querystring'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import { FunctionComponent } from 'react'
 import Layout from '../../../components/Layout'
 import Posts from '../../../components/Posts'
 import {
@@ -54,7 +53,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-const Index: FunctionComponent<IndexProps> = (props) => {
+const Index: React.FC<IndexProps> = (props) => {
   const { totalPostsCount, posts, page } = props
 
   return (

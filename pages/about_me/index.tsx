@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import Image from '../../components/Image'
-import { FunctionComponent } from 'react'
 import Layout from '../../components/Layout'
 
-const AboutMe: FunctionComponent = () => {
+const AboutMe: React.FC = () => {
   return (
     <Layout title="About Me">
       <Head>

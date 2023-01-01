@@ -1,15 +1,12 @@
 import path from 'path'
 import fs from 'fs'
-import { GetStaticProps } from 'next'
-import { FunctionComponent } from 'react'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Layout from '../../components/Layout'
 import { parseMarkdown } from '../../lib/parseMarkdown'
 
-type WorksProps = {
-  content: string
-}
+type Props = InferGetStaticPropsType<typeof getStaticProps>
 
-const Works: FunctionComponent<WorksProps> = (props) => {
+const Works: React.FC<Props> = (props) => {
   return (
     <Layout title="works">
       <article className="max-w-3xl md:mt-6 rounded-xl bg-white dark:bg-cool-gray-800">

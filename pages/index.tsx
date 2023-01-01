@@ -1,20 +1,14 @@
-import { ParsedUrlQuery } from 'querystring'
-import { GetStaticProps } from 'next'
-import { FunctionComponent } from 'react'
+import { GetStaticProps, InferGetStaticPropsType } from 'next'
 import Layout from '../components/Layout'
 import { getAllPosts, sortPosts, paginatePosts } from '../lib/posts'
-import { PostMetadata } from '../types/PostMetadata'
 import Posts from "../components/Posts"
 
-interface IndexProps {
-  totalPostsCount: number
-  posts: PostMetadata[]
-}
+type Props = InferGetStaticPropsType<typeof getStaticProps>
 
 const perCount = 10
 const page = 1
 
-export const getStaticProps: GetStaticProps<IndexProps, ParsedUrlQuery> = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const allPosts = sortPosts(await getAllPosts(), 'desc')
   const posts = paginatePosts(allPosts, perCount, 1)
 
@@ -26,7 +20,7 @@ export const getStaticProps: GetStaticProps<IndexProps, ParsedUrlQuery> = async 
   }
 }
 
-const Index: FunctionComponent<IndexProps> = (props) => {
+const Index: React.FC<Props> = (props) => {
   const { totalPostsCount, posts } = props
 
   return (
