@@ -11,20 +11,19 @@ const App = ({ Component, pageProps }: AppProps): JSX.Element => {
 
   return (
     <HeaderProvider>
-      <Head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
+      <Script
+        id="gtag"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-              gtag('config', '${GA_ID}');
-            `
-          }}
-        >
-        </script>
-      </Head>
+            gtag('config', '${GA_ID}');
+          `
+        }}
+      >
+      </Script>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=UA-44082439-2" />
 
       <Component {...pageProps} />
