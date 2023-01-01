@@ -3,6 +3,7 @@ import {
   useContext,
   createContext,
   ReactElement,
+  useCallback,
 } from 'react'
 
 type HeaderState = {
@@ -22,13 +23,13 @@ export function HeaderProvider({
 }): JSX.Element {
   const [opened, setOpened] = useState(false)
 
-  const toggleHeader = () => {
+  const toggleHeader = useCallback(() => {
     setOpened((prev) => !prev)
-  }
+  }, [setOpened])
 
-  const closeHeader = () => {
+  const closeHeader = useCallback(() => {
     setOpened(false)
-  }
+  }, [setOpened])
 
   return (
     <HeaderContext.Provider value={{ opened, toggleHeader, closeHeader }}>
