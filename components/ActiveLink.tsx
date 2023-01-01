@@ -14,7 +14,7 @@ const ActiveLink: FunctionComponent<ActiveLinkProps> = ({ children, hrefRe, acti
   const router = useRouter()
 
   if ((hrefRe && hrefRe.test(router.pathname)) || router.pathname === href) {
-    className = activeClassName + String(className)
+    className = `${activeClassName} ${className}`
   }
 
   return <Link {...props} className={className}>{children}</Link>
