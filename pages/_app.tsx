@@ -1,7 +1,6 @@
 import '../styles/global.scss'
 import { AppProps } from 'next/app'
 import { HeaderProvider } from '../context/header'
-import Head from 'next/head'
 import { GA_ID } from "../lib/gtag"
 import usePageView from "../hooks/usePageView"
 import Script from "next/script"
