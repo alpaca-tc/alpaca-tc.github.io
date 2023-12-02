@@ -4,6 +4,8 @@ date: 2023-12-02 18:00
 categories: dialy
 ---
 
+[SmartHR Advent Calendar 2023](https://qiita.com/advent-calendar/2023/smarthr)の2日目です。
+
 私事ですが、ただいま家族全員がインフルエンザA型に感染しており、自身も39度を超える発熱をしています。  
 大変しんどいので、記事が短いのはご了承ください。
 
