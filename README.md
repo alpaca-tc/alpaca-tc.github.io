@@ -4,6 +4,6 @@ The source of [alpaca.tc](https://alpaca.tc)
 
 ```
 # Install dependencies
-yarn
-yarn dev
+pnpm
+pnpm dev
 ```

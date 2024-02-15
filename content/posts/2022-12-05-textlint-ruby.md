@@ -44,7 +44,7 @@ end
 その後、textlintのプラグインを追加します。
 
 ```shell
-$ yarn add --dev textlint-plugin-ruby
+$ pnpm add --dev textlint-plugin-ruby
 or
 $ npm install --dev textlint-plugin-ruby
 ```
