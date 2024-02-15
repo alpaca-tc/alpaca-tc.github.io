@@ -24,7 +24,7 @@ const Index: React.FC<Props> = (props) => {
   const { totalPostsCount, posts } = props
 
   return (
-    <Layout title="alpaca-tc">
+    <Layout>
       <div className="mt-12 space-y-6">
         <Posts
           posts={posts}

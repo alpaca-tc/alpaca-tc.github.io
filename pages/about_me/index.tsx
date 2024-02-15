@@ -1,13 +1,9 @@
-import Head from 'next/head'
 import Image from '../../components/Image'
 import Layout from '../../components/Layout'
 
 const AboutMe: React.FC = () => {
   return (
     <Layout title="About Me">
-      <Head>
-        <title>About Me</title>
-      </Head>
       <section className="mb-4">
         <h1 className="block text-black no-underline font-bold text-xl lg:text-3xl font-extrabold leading-none lg:leading-tight">
           自己紹介
