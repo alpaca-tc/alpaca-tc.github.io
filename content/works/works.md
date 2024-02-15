@@ -1,5 +1,13 @@
 # 活動や経歴
 
+## 2021 ~ 
+
+株式会社SmartHR
+
+- Developer Productivity Engineer のユニット立ち上げ (2022/07~)
+- [SmartHR 人事評価](https://smarthr.jp/function/evaluation/) の開発 (2021/11~2022/06)
+- [株式会社SmartHR](https://smarthr.co.jp/) 入社 (2021/11)
+
 ## 2017 ~ 2021
 
 株式会社マネーフォワード
@@ -45,3 +53,7 @@
 - [日商簿記2級](https://www.kentei.ne.jp/bookkeeping/class02.php) 合格 (2008/10)
 - [基本情報技術者試験](https://www.jitec.jp/1_11seido/h13/fe.html) 合格 (2007/10)
 - [岐阜県立岐阜商業高等学校](https://www.kengisho.ed.jp/) 入学 (2007/04)
+
+# 登壇資料
+
+- [Speaker Deck](https://speakerdeck.com/alpacatc)
