@@ -1,3 +1,6 @@
-export const env = {
-  origin: 'https://alpaca.tc'
+const nextConfig = {
+  output: 'export',
+  origin: 'https://alpaca.tc',
 }
+
+export default nextConfig
