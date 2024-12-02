@@ -14,12 +14,12 @@ jobs:
     - name: setup node
       uses: actions/setup-node@v4
       with:
-        node-version: '20.x'
+        node-version: '22.x'
 
     - name: setup pnpm
-      uses: pnpm/action-setup@v3
+      uses: pnpm/action-setup@v4
       with:
-        version: 8
+        version: 9
         run_install: false
 
     - name: Get pnpm store directory
@@ -55,7 +55,7 @@ jobs:
     # gh-pagesブランチにoutディレクトリの中身をプッシュする
     # gh-pagesブランチは自動的に作成される
     - name: deploy
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v4
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./out
