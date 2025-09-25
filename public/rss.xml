@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>alpaca-tc</title>
+        <link>https://alpaca.tc/</link>
+        <description></description>
+        <lastBuildDate>Thu, 25 Sep 2025 15:07:58 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <copyright>alpaca-tc</copyright>
+        <item>
+            <title><![CDATA[AI寺子屋2025でAIを学ぶ]]></title>
+            <link>https://alpaca.tc/posts/2025-08-25-ai-terakoya-2025</link>
+            <guid isPermaLink="false">2025-08-25-ai-terakoya-2025</guid>
+            <pubDate>Mon, 25 Aug 2025 10:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Railsで任意のキャッシュストアを移行する]]></title>
+            <link>https://alpaca.tc/posts/2024-12-02-advent-calendar-2024</link>
+            <guid isPermaLink="false">2024-12-02-advent-calendar-2024</guid>
+            <pubDate>Mon, 02 Dec 2024 10:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[佐渡島の物件情報を集める方法]]></title>
+            <link>https://alpaca.tc/posts/2023-12-02-advent-calendar-2023</link>
+            <guid isPermaLink="false">2023-12-02-advent-calendar-2023</guid>
+            <pubDate>Sat, 02 Dec 2023 09:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Kaigi on Rails 2023に登壇して、ruby/rubyにコントリビュートした話]]></title>
+            <link>https://alpaca.tc/posts/2023-11-08-kaigi-on-rails-2023</link>
+            <guid isPermaLink="false">2023-11-08-kaigi-on-rails-2023</guid>
+            <pubDate>Wed, 08 Nov 2023 05:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[textlintでRubyファイルを文章校正できるようにした話]]></title>
+            <link>https://alpaca.tc/posts/2022-12-05-textlint-ruby</link>
+            <guid isPermaLink="false">2022-12-05-textlint-ruby</guid>
+            <pubDate>Mon, 05 Dec 2022 08:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[がん手術における収支報告]]></title>
+            <link>https://alpaca.tc/posts/2021-11-14-thyroid-surgery-insurance-benefits</link>
+            <guid isPermaLink="false">2021-11-14-thyroid-surgery-insurance-benefits</guid>
+            <pubDate>Sun, 14 Nov 2021 12:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[育児バーンアウト]]></title>
+            <link>https://alpaca.tc/posts/2021-08-10-burnout-in-chidcare</link>
+            <guid isPermaLink="false">2021-08-10-burnout-in-chidcare</guid>
+            <pubDate>Tue, 10 Aug 2021 11:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[パートナーの首を気にしてみる大事さ]]></title>
+            <link>https://alpaca.tc/posts/2021-06-09-thyroid-surgery</link>
+            <guid isPermaLink="false">2021-06-09-thyroid-surgery</guid>
+            <pubDate>Wed, 09 Jun 2021 11:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Railsプロジェクトで好んで使っている便利な処理]]></title>
+            <link>https://alpaca.tc/posts/2021-05-23-rails-idioms</link>
+            <guid isPermaLink="false">2021-05-23-rails-idioms</guid>
+            <pubDate>Sun, 23 May 2021 11:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ActiveRecordでbitmaskを扱う]]></title>
+            <link>https://alpaca.tc/posts/2021-05-08-active-record-bitmask</link>
+            <guid isPermaLink="false">2021-05-08-active-record-bitmask</guid>
+            <pubDate>Fri, 07 May 2021 11:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[nextjsの静的配信ブログで自前生成のogimageを配信する]]></title>
+            <link>https://alpaca.tc/posts/2021-05-07-generated-og-image</link>
+            <guid isPermaLink="false">2021-05-07-generated-og-image</guid>
+            <pubDate>Fri, 07 May 2021 11:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[育児のために買ってよかったもの(乳幼児~幼児編)]]></title>
+            <link>https://alpaca.tc/posts/2021-05-05-childcare-supplies</link>
+            <guid isPermaLink="false">2021-05-05-childcare-supplies</guid>
+            <pubDate>Wed, 05 May 2021 11:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rustでブラウザからバイナリをパースする]]></title>
+            <link>https://alpaca.tc/posts/2020-12-21-rust-advent-calendar</link>
+            <guid isPermaLink="false">2020-12-21-rust-advent-calendar</guid>
+            <pubDate>Mon, 21 Dec 2020 08:21:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[kamipoさんのアドバイスと拠点を跨いだ勉強会]]></title>
+            <link>https://alpaca.tc/posts/2020-12-18-kamipo-san-no-advice-to-kyoten-wo-mataida-benkyou-kai</link>
+            <guid isPermaLink="false">2020-12-18-kamipo-san-no-advice-to-kyoten-wo-mataida-benkyou-kai</guid>
+            <pubDate>Fri, 18 Dec 2020 08:21:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ピクシブを退職しました！]]></title>
+            <link>https://alpaca.tc/posts/2017-07-03-i_retired_from_pixiv</link>
+            <guid isPermaLink="false">2017-07-03-i_retired_from_pixiv</guid>
+            <pubDate>Sun, 02 Jul 2017 15:03:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[シェアリンクの作り方]]></title>
+            <link>https://alpaca.tc/posts/2015-10-13-create-share-link</link>
+            <guid isPermaLink="false">2015-10-13-create-share-link</guid>
+            <pubDate>Tue, 13 Oct 2015 12:31:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[東京に慣れてきた]]></title>
+            <link>https://alpaca.tc/posts/2015-03-07-pixiv-year</link>
+            <guid isPermaLink="false">2015-03-07-pixiv-year</guid>
+            <pubDate>Fri, 23 May 2014 16:07:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[クロノスを退社しました！]]></title>
+            <link>https://alpaca.tc/posts/2014-05-24-i-just-quit-my-job-at-kronos</link>
+            <guid isPermaLink="false">2014-05-24-i-just-quit-my-job-at-kronos</guid>
+            <pubDate>Fri, 23 May 2014 16:07:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Railsの補助プラグインを書いた]]></title>
+            <link>https://alpaca.tc/posts/2014-04-30-alpaca-rails-support</link>
+            <guid isPermaLink="false">2014-04-30-alpaca-rails-support</guid>
+            <pubDate>Tue, 29 Apr 2014 15:46:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[めまぐるしい１年！]]></title>
+            <link>https://alpaca.tc/posts/2014-04-19-i-im-join-for-this-company</link>
+            <guid isPermaLink="false">2014-04-19-i-im-join-for-this-company</guid>
+            <pubDate>Fri, 18 Apr 2014 17:37:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[APIのMockサーバーを構築する「Apiary」を使ってみる]]></title>
+            <link>https://alpaca.tc/posts/2014-04-10-apiary</link>
+            <guid isPermaLink="false">2014-04-10-apiary</guid>
+            <pubDate>Thu, 10 Apr 2014 12:36:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Gemを書くときに知っておきたい3つの事]]></title>
+            <link>https://alpaca.tc/posts/2014-02-13-i-have-almost-finished-implementing-comment-parser</link>
+            <guid isPermaLink="false">2014-02-13-i-have-almost-finished-implementing-comment-parser</guid>
+            <pubDate>Tue, 18 Feb 2014 11:52:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[ここまで出来る！RubyのSplat Operatorまとめ]]></title>
+            <link>https://alpaca.tc/posts/2014-02-12-how-to-use-star</link>
+            <guid isPermaLink="false">2014-02-12-how-to-use-star</guid>
+            <pubDate>Tue, 11 Feb 2014 19:16:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[久しぶりにGemを書いている]]></title>
+            <link>https://alpaca.tc/posts/2014-02-10-create-strip-comment</link>
+            <guid isPermaLink="false">2014-02-10-create-strip-comment</guid>
+            <pubDate>Mon, 10 Feb 2014 03:33:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[逆就活へ参加するときのノウハウまとめ 続き]]></title>
+            <link>https://alpaca.tc/posts/2014-01-20-gyaku-syuukatsu-2</link>
+            <guid isPermaLink="false">2014-01-20-gyaku-syuukatsu-2</guid>
+            <pubDate>Mon, 20 Jan 2014 07:28:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2014年にやりたい14のこと]]></title>
+            <link>https://alpaca.tc/posts/2014-01-14-somethings-that-i-want-to-do</link>
+            <guid isPermaLink="false">2014-01-14-somethings-that-i-want-to-do</guid>
+            <pubDate>Mon, 13 Jan 2014 15:05:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[neocomplete.vimのfile_includeを使いこなす]]></title>
+            <link>https://alpaca.tc/posts/2014-01-11-file-include-by-neocomplete</link>
+            <guid isPermaLink="false">2014-01-11-file-include-by-neocomplete</guid>
+            <pubDate>Sat, 11 Jan 2014 04:25:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[2013年に作ったVimプラグイン達]]></title>
+            <link>https://alpaca.tc/posts/2013-12-29-vim-plugins-2013</link>
+            <guid isPermaLink="false">2013-12-29-vim-plugins-2013</guid>
+            <pubDate>Sun, 29 Dec 2013 13:54:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[逆就活へ参加するときのノウハウまとめ]]></title>
+            <link>https://alpaca.tc/posts/2013-12-25-gyaku-syuukatsu-1</link>
+            <guid isPermaLink="false">2013-12-25-gyaku-syuukatsu-1</guid>
+            <pubDate>Wed, 25 Dec 2013 14:23:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Vim中級者を脱する path編]]></title>
+            <link>https://alpaca.tc/posts/2013-12-19-jump-to-gem-path</link>
+            <guid isPermaLink="false">2013-12-19-jump-to-gem-path</guid>
+            <pubDate>Wed, 18 Dec 2013 23:02:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[仕事が捗る！VimからGitを使う最適解]]></title>
+            <link>https://alpaca.tc/posts/2013-12-17-how-to-use-vim-unite-giti</link>
+            <guid isPermaLink="false">2013-12-17-how-to-use-vim-unite-giti</guid>
+            <pubDate>Tue, 17 Dec 2013 14:36:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Rubyのクラス変数について詰まったのでヘルプ]]></title>
+            <link>https://alpaca.tc/posts/2013-12-16-ruby-class-variable</link>
+            <guid isPermaLink="false">2013-12-16-ruby-class-variable</guid>
+            <pubDate>Sun, 15 Dec 2013 16:10:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Unite.vimとwatsonを使ったワークフロー]]></title>
+            <link>https://alpaca.tc/posts/2013-12-13-using-vim-unite-watson</link>
+            <guid isPermaLink="false">2013-12-13-using-vim-unite-watson</guid>
+            <pubDate>Thu, 12 Dec 2013 17:29:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[NeoComplete vs YouCompleteMe]]></title>
+            <link>https://alpaca.tc/posts/2013-12-09-neocomplete-vs-youcompleteme</link>
+            <guid isPermaLink="false">2013-12-09-neocomplete-vs-youcompleteme</guid>
+            <pubDate>Mon, 09 Dec 2013 15:04:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[インラインTODO管理のWatsonを使う]]></title>
+            <link>https://alpaca.tc/posts/2013-12-03-how-to-use-watson</link>
+            <guid isPermaLink="false">2013-12-03-how-to-use-watson</guid>
+            <pubDate>Tue, 03 Dec 2013 14:49:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Guard-shellが便利だった話]]></title>
+            <link>https://alpaca.tc/posts/2013-11-23-the-story-about-guard-shell</link>
+            <guid isPermaLink="false">2013-11-23-the-story-about-guard-shell</guid>
+            <pubDate>Fri, 22 Nov 2013 16:34:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Vimを勉強し始めました #1]]></title>
+            <link>https://alpaca.tc/posts/2013-11-21-i-begin-to-lean-vim-1</link>
+            <guid isPermaLink="false">2013-11-21-i-begin-to-lean-vim-1</guid>
+            <pubDate>Thu, 21 Nov 2013 00:11:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[そろそろVimを使いこなせるようになりたい。]]></title>
+            <link>https://alpaca.tc/posts/2013-11-15-i-begin-to-learn-vim</link>
+            <guid isPermaLink="false">2013-11-15-i-begin-to-learn-vim</guid>
+            <pubDate>Thu, 14 Nov 2013 21:58:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Vim中級者を脱する スコープ編]]></title>
+            <link>https://alpaca.tc/posts/2013-11-13-break-vim-beginners-scope</link>
+            <guid isPermaLink="false">2013-11-13-break-vim-beginners-scope</guid>
+            <pubDate>Wed, 13 Nov 2013 08:26:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[JavaScript補完プラグインのTernはすごいヤツ]]></title>
+            <link>https://alpaca.tc/posts/2013-11-13-how-to-use-tern-vim</link>
+            <guid isPermaLink="false">2013-11-13-how-to-use-tern-vim</guid>
+            <pubDate>Wed, 13 Nov 2013 05:40:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Vimを使って新人教育]]></title>
+            <link>https://alpaca.tc/posts/2013-11-11-training-of-new-employee</link>
+            <guid isPermaLink="false">2013-11-11-training-of-new-employee</guid>
+            <pubDate>Sun, 10 Nov 2013 20:21:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[オススメなVimのプラグイン紹介]]></title>
+            <link>https://alpaca.tc/posts/2013-11-07-plugins-best-of-vim-1</link>
+            <guid isPermaLink="false">2013-11-07-plugins-best-of-vim-1</guid>
+            <pubDate>Wed, 06 Nov 2013 20:22:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Vim中級者を脱する augroup編]]></title>
+            <link>https://alpaca.tc/posts/2013-11-02-break-vim-beginners-augroup</link>
+            <guid isPermaLink="false">2013-11-02-break-vim-beginners-augroup</guid>
+            <pubDate>Fri, 01 Nov 2013 17:30:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[octopressとセットで入れておきたいVimプラグインまとめ]]></title>
+            <link>https://alpaca.tc/posts/2013-11-01-octopress_and_vimplugin</link>
+            <guid isPermaLink="false">2013-11-01-octopress_and_vimplugin</guid>
+            <pubDate>Fri, 01 Nov 2013 08:06:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[３日で検索1位になりました]]></title>
+            <link>https://alpaca.tc/posts/2013-11-01-no1_alpaca_engineer</link>
+            <guid isPermaLink="false">2013-11-01-no1_alpaca_engineer</guid>
+            <pubDate>Thu, 31 Oct 2013 17:29:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[alpaca_octopress続き]]></title>
+            <link>https://alpaca.tc/posts/2013-10-30-about_alpaca_complete</link>
+            <guid isPermaLink="false">2013-10-30-about_alpaca_complete</guid>
+            <pubDate>Tue, 29 Oct 2013 19:34:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[alpaca_octopressを作っている]]></title>
+            <link>https://alpaca.tc/posts/2013-10-29-create_new_plugin_for_octopress</link>
+            <guid isPermaLink="false">2013-10-29-create_new_plugin_for_octopress</guid>
+            <pubDate>Mon, 28 Oct 2013 19:52:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[初めました]]></title>
+            <link>https://alpaca.tc/posts/2013-10-27-start_blog</link>
+            <guid isPermaLink="false">2013-10-27-start_blog</guid>
+            <pubDate>Sun, 27 Oct 2013 14:12:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
