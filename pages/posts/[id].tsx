@@ -53,14 +53,14 @@ const PostPage: React.FC<PostProps> = (props) => {
         <title>{post.title}</title>
       </Head>
       <Layout title={post.title} ogImage={ogImage} description={description}>
-        <article className="max-w-3xl md:mt-6 rounded-xl mx-auto bg-white dark:bg-cool-gray-800">
+        <article className="max-w-3xl md:mt-6 rounded-xl mx-auto bg-white dark:bg-gray-800">
           <PostHero post={post} />
           <div
-            className="prose max-w-3xl mx-auto dark:text-cool-gray-100"
+            className="prose max-w-3xl mx-auto dark:text-gray-100"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
-          <div className="flex justify-end mt-4 h-10 bg">
+          <div className="flex justify-end mt-4 h-10">
             <a href={urlForTwitter} data-url="" data-via="" data-width="120" data-counturl="" rel="nofollow noopener noreferrer" target="_blank">
               <FontAwesomeIcon icon={faTwitter} className="h-7 text-gray-400 hover:text-black transition duration-300 cursor-pointer" />
             </a>

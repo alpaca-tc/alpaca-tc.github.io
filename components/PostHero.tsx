@@ -9,7 +9,7 @@ type PostHeroProps = {
 const PostHero: FunctionComponent<PostHeroProps> = ({ post }) => {
   return (
     <>
-      <div className="text-grey-dark uppercase font-semibold text-xs tracking-wide">
+      <div className="text-gray-600 uppercase font-semibold text-xs tracking-wide">
         {dayjs(post.date).format('YYYY-MM-DD')}
       </div>
       <h1 className="text-2xl font-extrabold text-black leading-tight mt-1 mb-6">

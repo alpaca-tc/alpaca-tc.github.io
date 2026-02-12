@@ -10,7 +10,7 @@ type PrevNextPostNavProps = {
 
 const PrevNextPostNav: FunctionComponent<PrevNextPostNavProps> = ({ prevPost, nextPost }) => {
   const prevPostLink = prevPost ? (
-    <Link href={`/posts/${prevPost.id}`} className="block lg:flex-half text-gray-600 transition duration-300 hover:text-gray-900 mt-1 mb-1 pt-4 pb-4 border border-solid border-l-0 border-r-0 border-b-0">
+    <Link href={`/posts/${prevPost.id}`} className="block lg:flex-[1_1_50%] text-gray-600 transition duration-300 hover:text-gray-900 mt-1 mb-1 pt-4 pb-4 border border-solid border-l-0 border-r-0 border-b-0">
       <div>
         <span className="block text-gray-500 uppercase font-semibold text-xs tracking-wide mb-2 no-underline">
           前の記事
@@ -28,7 +28,7 @@ const PrevNextPostNav: FunctionComponent<PrevNextPostNavProps> = ({ prevPost, ne
   ) : null
 
   const nextPostLink = nextPost ? (
-    <Link href={`/posts/${nextPost.id}`} className="block lg:flex-half text-gray-700 transition duration-300 hover:text-gray-900 mt-1 mb-1 pt-4 pb-4 border border-solid border-l-0 border-r-0 border-b-0">
+    <Link href={`/posts/${nextPost.id}`} className="block lg:flex-[1_1_50%] text-gray-700 transition duration-300 hover:text-gray-900 mt-1 mb-1 pt-4 pb-4 border border-solid border-l-0 border-r-0 border-b-0">
       <div>
         <span className="block text-gray-500 uppercase font-semibold text-xs tracking-wide mb-2 no-underline">
           次の記事
