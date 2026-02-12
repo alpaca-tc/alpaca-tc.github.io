@@ -4,18 +4,16 @@ import { getScreenshot } from "../chromium"
 import { HEIGHT, WIDTH } from "../../lib/chromium"
 import { formatDate } from "../formatDate"
 import path from 'path';
-import { fileURLToPath } from 'url';
+const profileImagePath = path.resolve(process.cwd(), 'public/images/profile.jpg');
+const fontsDir = path.resolve(process.cwd(), 'lib/ogImage/_fonts');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const profileImage = readFileSync(`${__dirname}/../../public/images/profile.jpg`).toString('base64')
+const profileImage = readFileSync(profileImagePath).toString('base64')
 const profileSource = `data:image/jpeg;base64, ${profileImage}`
 
-const interRegular = readFileSync(`${__dirname}/_fonts/Inter-Regular.woff2`).toString('base64');
-const interBold = readFileSync(`${__dirname}/_fonts/Inter-Bold.woff2`).toString('base64');
-const notoBold = readFileSync(`${__dirname}/_fonts/NotoSansJP-Bold.otf`).toString('base64');
-const notoRegular = readFileSync(`${__dirname}/_fonts/NotoSansJP-Regular.otf`).toString('base64');
+const interRegular = readFileSync(path.join(fontsDir, 'Inter-Regular.woff2')).toString('base64');
+const interBold = readFileSync(path.join(fontsDir, 'Inter-Bold.woff2')).toString('base64');
+const notoBold = readFileSync(path.join(fontsDir, 'NotoSansJP-Bold.otf')).toString('base64');
+const notoRegular = readFileSync(path.join(fontsDir, 'NotoSansJP-Regular.otf')).toString('base64');
 
 const getCss = (): string => {
   const background = 'white';

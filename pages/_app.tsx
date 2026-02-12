@@ -5,7 +5,7 @@ import { GA_ID } from "../lib/gtag"
 import usePageView from "../hooks/usePageView"
 import Script from "next/script"
 
-const App = ({ Component, pageProps }: AppProps): JSX.Element => {
+const App = ({ Component, pageProps }: AppProps) => {
   usePageView()
 
   return (

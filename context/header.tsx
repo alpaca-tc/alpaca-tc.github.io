@@ -20,7 +20,7 @@ export function HeaderProvider({
   children,
 }: {
   children: ReactElement | ReactElement[]
-}): JSX.Element {
+}): ReactElement {
   const [opened, setOpened] = useState(false)
 
   const toggleHeader = useCallback(() => {

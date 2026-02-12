@@ -7,7 +7,7 @@ import Document, {
 import { Head as DocumentHead } from 'next/document'
 
 class CustomDocument extends Document {
-  public render(): JSX.Element {
+  public render() {
     return (
       <Html lang="ja">
         <DocumentHead />

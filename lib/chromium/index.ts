@@ -1,6 +1,6 @@
 import * as core from 'puppeteer-core';
 import { defaultOptions } from './options';
-import { ScreenshotOptions } from 'puppeteer-core/lib/types';
+import { ScreenshotOptions } from 'puppeteer-core';
 
 let _page: core.Page | null;
 
