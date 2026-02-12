@@ -53,10 +53,10 @@ const PostPage: React.FC<PostProps> = (props) => {
         <title>{post.title}</title>
       </Head>
       <Layout title={post.title} ogImage={ogImage} description={description}>
-        <article className="max-w-3xl md:mt-6 rounded-xl mx-auto bg-white dark:bg-gray-800">
+        <article className="max-w-3xl md:mt-6 rounded-xl mx-auto bg-white">
           <PostHero post={post} />
           <div
-            className="prose max-w-3xl mx-auto dark:text-gray-100"
+            className="prose max-w-3xl mx-auto dark:text-gray-800"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
